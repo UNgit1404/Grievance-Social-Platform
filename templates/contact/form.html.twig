@@ -1,0 +1,20 @@
+{# templates/contact/form.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Contact Me</h1>
+
+    {{ form_start(form) }}
+        <div>
+            {{ form_row(form.name, {'label': 'Name:'}) }}
+        </div>
+        <div>
+            {{ form_row(form.email, {'label': 'Email:'}) }}
+        </div>
+        <div>
+            {{ form_row(form.message, {'label': 'Message:'}) }}
+        </div>
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}
